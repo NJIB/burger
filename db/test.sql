@@ -1,1 +1,1 @@
-SELECT * FROM `cats`;
+SELECT * FROM `burgers`;

@@ -22,7 +22,7 @@ $(function() {
     );
   });
 
-  $('.delete-cat').on('click', function(event) {
+  $('.delete-burger').on('click', function(event) {
     const id = $(this).data('id');
 
     // Send the DELETE request.
