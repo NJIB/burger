@@ -1,7 +1,7 @@
 {
-  "name": "mvc_design",
+  "name": "burger",
   "version": "1.0.0",
-  "description": "",
+  "description": "Improve the app so that a cat can be deleted.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
     "build-docs": "jsdoc -c .jsdoc.json --readme README.md",
     "lint": "eslint server.js"
   },
-  "author": "",
+  "author": "NJIB",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
@@ -23,5 +23,13 @@
     "eslint-config-google": "^0.14.0",
     "jsdoc": "^3.6.3",
     "nodemon": "^1.19.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NJIB/burger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NJIB/burger/issues"
+  },
+  "homepage": "https://github.com/NJIB/burger#readme"
 }
