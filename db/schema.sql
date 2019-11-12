@@ -1,11 +1,11 @@
 ### Schema
 -- Drops DB if it already exists --
-DROP DATABASE IF EXISTS cat_db;
+DROP DATABASE IF EXISTS burger_db;
 
-CREATE DATABASE cat_db;
-USE cat_db;
+CREATE DATABASE burger_db;
+USE burger_db;
 
-CREATE TABLE cats
+CREATE TABLE burgers
 (
 	id int NOT NULL AUTO_INCREMENT,
 	name varchar(255) NOT NULL,
