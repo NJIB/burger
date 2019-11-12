@@ -3,37 +3,37 @@ const express = require('express');
 const router = express.Router();
 
 // Import the model (burger.js) to use its database functions.
-const cat = require('../models/burger.js');
+const burger = require('../models/burger.js');
 
 // Create all our routes and set up logic within those routes where required.
 router.get('/', function(req, res) {
-  cat.all(function(data) {
+  burger.all(function(data) {
     const hbsObject = {
-      cats: data,
+      burgers: data,
     };
     console.log(hbsObject);
     res.render('index', hbsObject);
   });
 });
 
-router.post('/api/cats', function(req, res) {
-  cat.create(
-      ['name', 'sleepy'],
-      [req.body.name, req.body.sleepy],
+router.post('/api/burgers', function(req, res) {
+  burger.create(
+      ['name', 'eaten'],
+      [req.body.name, req.body.eaten],
       function(result) {
         // Send back the ID of the new quote
         res.json({id: result.insertId});
       });
 });
 
-router.put('/api/cats/:id', function(req, res) {
+router.put('/api/burgers/:id', function(req, res) {
   const condition = 'id = ' + req.params.id;
 
   console.log('condition', condition);
 
-  cat.update(
+  burger.update(
       {
-        sleepy: req.body.sleepy,
+        eaten: req.body.eaten,
       },
       condition,
       function(result) {
@@ -46,12 +46,12 @@ router.put('/api/cats/:id', function(req, res) {
   );
 });
 
-router.delete('/api/cats/:id', function(req, res) {
+router.delete('/api/burgers/:id', function(req, res) {
   const condition = 'id = ' + req.params.id;
 
   console.log('condition', condition);
 
-  cat.delete(
+  burger.delete(
       condition,
       function(result) {
         if (result.affectedRows === 0) {
