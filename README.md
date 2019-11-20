@@ -1,14 +1,7 @@
-## Instructions
+## Eat-Da-Burger
 
-Improve the app so that a cat can be deleted.
+Using a range of technologies (Nodejs, Express server, Handlebars, MySQL, ORM, among others), this app demonstrates basic full-stack capabilities.  
 
-### Edit the following:
-* Add a delete button into the views/partials/cats/cat-block.handlebars file next to each cat.
+Once the server is connected and started, the user has the ability to create records (burger orders) that are saved to a MySQL database.  These records are displayed to the browser using Handlebars.  The condition of these records can then be changed/updated, using buttons by each record (burger).  Burgers can be changed from 'not eaten' to 'eaten', and they will be moved between the 2 different lists.  Burgers can also be deleted from each list.
 
-* The public/assets/js/cats.js file to add a jQuery event handler for the delete button.
-
-* The config/orm.js to include a delete key and function
-
-* The cat model at models/cat.js to include a delete key and function that uses the ORM
-
-* The controllers/catsController.js file to have a /api/cats/:id delete route, to call the delete key of the cat model
+Upon opening the folder in Visual Studio Code, the server can be started via thge 'npm run watch'  command in the terminal.  After that, the app is opened in the browser via the 'localhost:3000' entry.
